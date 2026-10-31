@@ -91,7 +91,7 @@ export async function getMyOrganization(req, res) {
     return res.status(200).json({
       success: true,
       message: "Organization Fetched Successfully",
-      organizations,
+      organizations:organizationMemberShip
     });
   } catch (error) {
     console.log(error);
@@ -106,7 +106,7 @@ export async function getMyOrganization(req, res) {
 export async function updateOrganizationController(req, res) {
   try {
     let user = req.user._id;
-    let organization = req.params.id;
+    let organization = req.params.organizationId;
 
     const membership = await OrganizationMemberShip.findOne({
       user,

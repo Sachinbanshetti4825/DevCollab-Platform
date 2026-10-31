@@ -2,12 +2,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import UserProvider from "./features/Auth/context/auth.context.jsx";
 import AppRoutes from "../AppRoutes.jsx";
+import OrganizationProvider from "./features/Organization/context/organization.context.jsx";
 
 const App = () => {
 
   return (
     <UserProvider>
-      <AppRoutes/>
+      <OrganizationProvider>
+        <AppRoutes/>
+      </OrganizationProvider>
     </UserProvider>
   );
 

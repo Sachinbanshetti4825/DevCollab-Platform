@@ -73,7 +73,7 @@ const Login = () => {
       });
 
       // Change "/" if your dashboard uses another route.
-      navigate("/");
+      navigate("/dashboard");
     } catch (error) {
       setServerError(
         error.response?.data?.message ||

@@ -16,12 +16,12 @@ organizationRouter.post(
   authMiddleware,
   organizationValidator,
   validateRequest,
-  createOrganizationController,
+  createOrganizationController
 );
 organizationRouter.get("/my", authMiddleware, getMyOrganization);
 
 organizationRouter.patch(
-  "/UpdateOrganization/:id",
+  "/UpdateOrganization/:organizationId",
   authMiddleware,
   organizationValidator,
   validateRequest,

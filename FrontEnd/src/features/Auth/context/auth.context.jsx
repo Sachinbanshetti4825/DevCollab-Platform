@@ -76,6 +76,8 @@ const UserProvider = ({ children }) => {
     checkAuth();
   }, []);
 
+  console.log(user);
+
   return (
     <userContext.Provider
       value={{

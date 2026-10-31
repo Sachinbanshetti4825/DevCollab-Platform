@@ -4,7 +4,7 @@ export const getMe=async ()=>{
 
     const response=await api.get("/user/me");
 
-    return response.data;
+    return response.data.user;
 
 }
 
@@ -19,5 +19,5 @@ export const register = async (credentials) => {
 };
 
 export const logout = async () => {
-  await api.post("/user/logout");
+  await api.delete("/user/logout");
 };
